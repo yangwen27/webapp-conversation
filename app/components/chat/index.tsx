@@ -82,7 +82,7 @@ const Chat: FC<IChatProps> = ({
     onImageLinkLoadSuccess,
     onClear,
   } = useImageFiles()
-  const handleSend1()=>{
+  const handleSend1=()=>{
       if (!valid() || (checkCanSend && !checkCanSend()))
       return
     onSend('1', files.filter(file => file.progress !== -1).map(fileItem => ({
@@ -92,7 +92,7 @@ const Chat: FC<IChatProps> = ({
       upload_file_id: fileItem.fileId,
     })))
   }
-  const handleSend2()=>{
+  const handleSend2=()=>{
       if (!valid() || (checkCanSend && !checkCanSend()))
       return
     onSend('2', files.filter(file => file.progress !== -1).map(fileItem => ({
@@ -102,7 +102,7 @@ const Chat: FC<IChatProps> = ({
       upload_file_id: fileItem.fileId,
     })))
   }
-  const handleSend3()=>{
+  const handleSend3=()=>{
       if (!valid() || (checkCanSend && !checkCanSend()))
       return
     onSend('3', files.filter(file => file.progress !== -1).map(fileItem => ({
@@ -112,7 +112,7 @@ const Chat: FC<IChatProps> = ({
       upload_file_id: fileItem.fileId,
     })))
   }
-  const handleSend4()=>{
+  const handleSend4=()=>{
       if (!valid() || (checkCanSend && !checkCanSend()))
       return
     onSend('4', files.filter(file => file.progress !== -1).map(fileItem => ({
@@ -122,7 +122,7 @@ const Chat: FC<IChatProps> = ({
       upload_file_id: fileItem.fileId,
     })))
   }
-  const handleSend5()=>{
+  const handleSend5=()=>{
       if (!valid() || (checkCanSend && !checkCanSend()))
       return
     onSend('5', files.filter(file => file.progress !== -1).map(fileItem => ({
