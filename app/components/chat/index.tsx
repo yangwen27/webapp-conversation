@@ -82,7 +82,56 @@ const Chat: FC<IChatProps> = ({
     onImageLinkLoadSuccess,
     onClear,
   } = useImageFiles()
-
+  const handleSend1()=>{
+      if (!valid() || (checkCanSend && !checkCanSend()))
+      return
+    onSend('1', files.filter(file => file.progress !== -1).map(fileItem => ({
+      type: 'image',
+      transfer_method: fileItem.type,
+      url: fileItem.url,
+      upload_file_id: fileItem.fileId,
+    })))
+  }
+  const handleSend2()=>{
+      if (!valid() || (checkCanSend && !checkCanSend()))
+      return
+    onSend('2', files.filter(file => file.progress !== -1).map(fileItem => ({
+      type: 'image',
+      transfer_method: fileItem.type,
+      url: fileItem.url,
+      upload_file_id: fileItem.fileId,
+    })))
+  }
+  const handleSend3()=>{
+      if (!valid() || (checkCanSend && !checkCanSend()))
+      return
+    onSend('3', files.filter(file => file.progress !== -1).map(fileItem => ({
+      type: 'image',
+      transfer_method: fileItem.type,
+      url: fileItem.url,
+      upload_file_id: fileItem.fileId,
+    })))
+  }
+  const handleSend4()=>{
+      if (!valid() || (checkCanSend && !checkCanSend()))
+      return
+    onSend('4', files.filter(file => file.progress !== -1).map(fileItem => ({
+      type: 'image',
+      transfer_method: fileItem.type,
+      url: fileItem.url,
+      upload_file_id: fileItem.fileId,
+    })))
+  }
+  const handleSend5()=>{
+      if (!valid() || (checkCanSend && !checkCanSend()))
+      return
+    onSend('5', files.filter(file => file.progress !== -1).map(fileItem => ({
+      type: 'image',
+      transfer_method: fileItem.type,
+      url: fileItem.url,
+      upload_file_id: fileItem.fileId,
+    })))
+  }
   const handleSend = () => {
     if (!valid() || (checkCanSend && !checkCanSend()))
       return
@@ -146,6 +195,13 @@ const Chat: FC<IChatProps> = ({
       {
         !isHideSendInput && (
           <div className={cn(!feedbackDisabled && '!left-3.5 !right-3.5', 'absolute z-10 bottom-0 left-0 right-0')}>
+            <div className='flex justify-center'>
+               <div className=' border-solid border border-gray-200 mx-1 rounded-md px-2 py-2 text-sm font-medium cursor-pointer' onClick={handleSend1}>非常不喜欢</div>
+              <div className=' border-solid border border-gray-200 mx-1 rounded-md px-2 py-2 text-sm font-medium cursor-pointer' onClick={handleSend2}>不喜欢</div>
+              <div className=' border-solid border border-gray-200 mx-1 rounded-md px-2 py-2 text-sm font-medium cursor-pointer' onClick={handleSend3}>一般</div>
+              <div className=' border-solid border border-gray-200 mx-1 rounded-md px-2 py-2 text-sm font-medium cursor-pointer' onClick={handleSend4}>喜欢</div>
+              <div className=' border-solid border border-gray-200 mx-1 rounded-md px-2 py-2 text-sm font-medium cursor-pointer' onClick={handleSend5}>非常喜欢</div>
+            </div>
             <div className='p-[5.5px] max-h-[150px] bg-white border-[1.5px] border-gray-200 rounded-xl overflow-y-auto'>
               {
                 visionConfig?.enabled && (
