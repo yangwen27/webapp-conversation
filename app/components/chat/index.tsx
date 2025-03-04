@@ -83,7 +83,7 @@ const Chat: FC<IChatProps> = ({
     onClear,
   } = useImageFiles()
   const handleSend1=()=>{
-      if (!valid() || (checkCanSend && !checkCanSend()))
+      if (checkCanSend && !checkCanSend())
       return
     onSend('1', files.filter(file => file.progress !== -1).map(fileItem => ({
       type: 'image',
@@ -93,7 +93,7 @@ const Chat: FC<IChatProps> = ({
     })))
   }
   const handleSend2=()=>{
-      if (!valid() || (checkCanSend && !checkCanSend()))
+       if (checkCanSend && !checkCanSend())
       return
     onSend('2', files.filter(file => file.progress !== -1).map(fileItem => ({
       type: 'image',
@@ -103,7 +103,7 @@ const Chat: FC<IChatProps> = ({
     })))
   }
   const handleSend3=()=>{
-      if (!valid() || (checkCanSend && !checkCanSend()))
+      if (checkCanSend && !checkCanSend())
       return
     onSend('3', files.filter(file => file.progress !== -1).map(fileItem => ({
       type: 'image',
@@ -113,7 +113,7 @@ const Chat: FC<IChatProps> = ({
     })))
   }
   const handleSend4=()=>{
-      if (!valid() || (checkCanSend && !checkCanSend()))
+     if (checkCanSend && !checkCanSend())
       return
     onSend('4', files.filter(file => file.progress !== -1).map(fileItem => ({
       type: 'image',
@@ -123,7 +123,7 @@ const Chat: FC<IChatProps> = ({
     })))
   }
   const handleSend5=()=>{
-      if (!valid() || (checkCanSend && !checkCanSend()))
+     if (checkCanSend && !checkCanSend())
       return
     onSend('5', files.filter(file => file.progress !== -1).map(fileItem => ({
       type: 'image',
